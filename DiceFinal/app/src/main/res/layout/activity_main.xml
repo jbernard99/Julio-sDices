@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/dicesTag"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text=" # of dices ( 1 - 999 ) :"
+            android:textSize="18sp"
+            app:fontFamily="sans-serif" />
+
+        <EditText
+            android:id="@+id/dicesEditText"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="-85dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/dicesTag"
+            android:inputType="number"
+            android:paddingTop="10dp" />
+
+        <TextView
+            android:id="@+id/facesTag"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_below="@id/dicesTag"
+            android:gravity="center"
+            android:text="# of faces ( 2 - 100 ) :"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/facesEditText"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dicesEditText"
+            android:layout_toRightOf="@id/facesTag"
+            android:inputType="number" />
+
+        <CheckBox
+            android:id="@+id/logCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/facesTag"
+            android:layout_marginTop="20dp"
+            android:checked="true"
+            android:text="Show every results" />
+
+        <TextView
+            android:id="@+id/alertBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logCheckbox"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textAllCaps="true"
+            android:textColor="#00ff00"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/rollButton"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="ROLL"
+        android:textSize="24sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp">
+
+            <TextView
+                android:id="@+id/outputTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                app:fontFamily="sans-serif" />
+        </ScrollView>
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-5136091694282644/3662493391">
+        </com.google.android.gms.ads.AdView>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
